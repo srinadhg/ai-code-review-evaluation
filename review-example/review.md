@@ -14,7 +14,7 @@ Handle None, empty list, None values inside the list, non-string values inside t
 
 2. **[High] Non-string inside the list crashes.** For `["TagA", 123, "TagB"]`, it raises `AttributeError: 'int' object has no attribute 'lower'`. Real data is often dirty, and the requirement lists this case too.
 
-3. **[Medium] No tests supplied.** Nothing covers None-inside-list or invalid types; only the happy path was considered.
+3. **[Medium] The AI-generated solution was supplied without tests.** Nothing covers None-inside-list or invalid types; only the happy path was considered.The repository's evaluation tests expose the missing edge cases, but the original implementation did not include tests for them.
 
 4. **[Nit] `if not tags` vs `if tags is None`.** Both behave correctly here. The explicit `is None` check is clearer about intent, but this does not affect the verdict.
 
